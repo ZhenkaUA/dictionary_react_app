@@ -4,11 +4,11 @@ import Dictionary from './Dictionary'
 function App() {
   return (
     <div className="App">
-      <div classsName="container">
+      <div className="container">
       <header className="App-header">
       </header>
  <main>
-<Dictionary/>
+<Dictionary defaultKeyword="sunset"/>
  </main>
       <footer>
         Coded by
