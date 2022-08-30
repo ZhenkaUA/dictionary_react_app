@@ -11,7 +11,16 @@ function App() {
 <Dictionary defaultKeyword="sunset"/>
  </main>
       <footer>
-        Coded by
+      <small>
+        <a
+          href="https://github.com/ZhenkaUA/dictionary_react_app.git"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Open-source code
+        </a>
+        <span> by Yevheniia Kramar</span>
+      </small>
       </footer>
       </div>
     </div>
