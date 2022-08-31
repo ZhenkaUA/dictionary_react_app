@@ -6,6 +6,7 @@ import Results from "./Results";
 export default function Dictionary(props){
     let [keyword, setKeyword]=useState(props.defaultKeyword);
     let [definition, setDefinition]=useState(null);
+    let [loaded, setLoaded] = useState(false);
 
 function handleResponse(response){
 setDefinition(response.data[0]);
@@ -24,11 +25,26 @@ function handleSubmit(event){
 function handleKeywordChange(event){
     setKeyword(event.target.value);  
 }
-    return (<div className="Dictionary">
+
+function load(){
+    setLoaded(true);
+    search();
+}
+
+if (loaded){
+    return (
+    <div className="Dictionary">
+        <section>
 <form onSubmit={handleSubmit}>
-    <input type="search" onChange={handleKeywordChange}/>
+<h3>What word do you want to look up?</h3>
+    <input type="search" onChange={handleKeywordChange} defaultValue={props.defaultKeyword}/>
 </form>
+</section>
 <Results definition={definition}/>
     </div>
     );
+} else {
+    load();
+    return "Loading"
+}
 }
