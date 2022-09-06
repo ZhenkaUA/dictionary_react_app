@@ -1,4 +1,5 @@
 import './App.css';
+import logo from "./logo.svg";
 import Dictionary from './Dictionary'
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <div className="App">
       <div className="container">
       <header className="App-header">
+            <img src={logo} className="logo" alt="SheCodes Logo" />
       </header>
  <main>
 <Dictionary defaultKeyword="sunset"/>
